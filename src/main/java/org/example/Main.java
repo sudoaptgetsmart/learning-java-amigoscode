@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -232,6 +233,23 @@ public class Main {
             count++;
         }
         while (count <= 10);
+
+        // Taking User Input With the Scanner Class
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("What is your name?");
+        String userName = scanner.nextLine();
+        System.out.println("Hello " + userName);
+        System.out.println("How old are you?");
+        int currentAge = scanner.nextInt();
+        int yearBorn = LocalDate.now().minusYears(currentAge).getYear();
+        System.out.print("You were born in " + yearBorn);
+        if (currentAge < 18) {
+            System.out.println(" and you are not an adult");
+        } else {
+            System.out.println(" and you are an adult :)");
+        }
+        // Methods
+
     }
 
     // reference types
