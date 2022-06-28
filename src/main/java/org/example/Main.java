@@ -248,10 +248,28 @@ public class Main {
         } else {
             System.out.println(" and you are an adult :)");
         }
+
         // Methods
+        String brand = "Samsung";
+        System.out.println("brand = " + brand.toUpperCase());
+
+        // Understanding Methods
+        char[] letters = {'A', 'A','B', 'C', 'D', 'D', 'D'};
+        int counter = countOccurrences(letters, 'A');
+        System.out.println("according to the counter we found it " + counter + " times");
 
     }
-
+    public static int countOccurrences(char [] letters, char searchLetter) {
+//        System.out.println(Arrays.toString(letters));
+//        System.out.println("searchLetter = " + searchLetter);
+        int counter = 0;
+        for (char letter : letters) {
+            if (letter == searchLetter) {
+                counter++;
+            }
+        }
+        return counter;
+    }
     // reference types
     static class Person {
         String name;
