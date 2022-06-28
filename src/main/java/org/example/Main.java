@@ -257,8 +257,53 @@ public class Main {
         char[] letters = {'A', 'A','B', 'C', 'D', 'D', 'D'};
         int counter = countOccurrences(letters, 'A');
         System.out.println("according to the counter we found it " + counter + " times");
+        System.out.println();
 
+        // Classes & Objects
+        String passportNumber = "12345";
+        String passportNumber2 = "123457659";
+
+        // Creating Objects
+        Lens lensOne = new Lens("Sony", "85mm", true);
+        Lens lensTwo = new Lens("Canon", "105mm", false);
+        Lens lensThree = new Lens("Canon", "30mm", false);
+
+        // Printing Object Attributes
+        System.out.println("lensOne brand = " + lensOne.brand);
+        System.out.println("lensOne focalLength = " + lensOne.focalLength);
+        System.out.println("lensOne isPrime = " + lensOne.isPrime);
+        System.out.println();
+
+        System.out.println("lensTwo brand = " + lensTwo.brand);
+        System.out.println("lensTwo focalLength = " + lensTwo.focalLength);
+        System.out.println("lensTwo isPrime = " + lensOne.isPrime);
+        System.out.println();
+
+        // Represent a Passport using Classes and Objects
+        Passport ukPassport = new Passport(
+                "112234",
+                "England",
+                LocalDate.of(2025, 1, 1)
+        );
+        Passport usPassport = new Passport(
+                "2344321",
+                "USA",
+                LocalDate.of(2025, 5, 1)
+        );
     }
+
+    // Creating Classes -> MOVED to its own class
+//    static class Lens {
+//        String brand;
+//        String focalLength;
+//        boolean isPrime;
+//
+//        Lens(String brand, String focalLength, boolean isPrime) {
+//            this.brand = brand;
+//            this.focalLength = focalLength;
+//            this.isPrime = isPrime;
+//        }
+//    }
     public static int countOccurrences(char [] letters, char searchLetter) {
 //        System.out.println(Arrays.toString(letters));
 //        System.out.println("searchLetter = " + searchLetter);
